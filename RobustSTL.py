@@ -48,8 +48,9 @@ def seasonality_extraction(sample, season_len=10, K=2, H=5, ds1=50., ds2=1.):
             return sample[idx]
 
         weight_sample = sample[idxs]
-        t_idxs = [idx - (int((idx -j)/season_len)+1)*season_len for j in idxs]
-        weights = np.array(list(map(lambda j, t: bilateral_filter(j, t, sample[j], sample[t], ds1, ds2), idxs, t_idxs)))
+        #t_idxs = [idx - (int((idx -j)/season_len)+1)*season_len for j in idxs]
+        #weights = np.array(list(map(lambda j, t: bilateral_filter(j, t, sample[j], sample[t], ds1, ds2), idxs, t_idxs)))
+        weights = np.array(list(map(lambda j: bilateral_filter(j, idx, sample[j], sample[idx], ds1, ds2), idxs)))
         season_value = np.sum(weight_sample * weights)/np.sum(weights)
         return season_value
 
