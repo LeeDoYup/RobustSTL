@@ -28,6 +28,16 @@ In `run_example.ipynb`, I attach the example codes to use RobustSTL and the outp
 * `sample_generater.py`: generation codes of synthetic sample.
 * `l1.py` : optimizer of l1 norm approximation (source: cvxopt)
 
+## Arugments of RobustSTL
+- input : input series
+- season_len : length of seasonal period
+- reg1 : first order regularization parameter for trend extraction
+- reg2 : second order regularization parameter for trend extraction
+- K : number of past season samples in seasonaility extraction
+- H : number of neighrhood in seasonality extraction
+- dn1, dn2 : hyperparameter of bilateral filter in denoising step.
+- ds1, ds2 : hypterparameter of bilarteral filter in seasonality extraction step.
+
 ## Shape of input sample
 Basically, RobustSTL is for univariate time series sample.  
 However, this codes are available on multi-variate time series sample.
@@ -36,3 +46,7 @@ Each series *have to* have same time length.
 
 * Univariate Time Series: `[Time] or [Time,1]`
 * Multivariate Time Series: `[N, Time] or [N, Time, 1]`
+
+## Etc
+The original paper has wrong notation in seasonality extraction.  
+The difference is [log](https://github.com/LeeDoYup/RobustSTL/commit/99a801525eca59469b0a314dd17fdd798c477c6d)
