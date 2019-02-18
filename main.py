@@ -1,5 +1,5 @@
 from RobustSTL import RobustSTL
-from sample_generater import sample_generation
+from sample_generator import sample_generation
 
 import numpy as np
 import os

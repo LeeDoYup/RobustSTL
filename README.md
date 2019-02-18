@@ -16,7 +16,7 @@ python3 main.py
 ```
 
 ## Sample Results 
-We generate a synthetic sample (sample_generater.py) and decompose it into `trend`, `seasonality`, and `remainder`.
+We generate a synthetic sample (sample_generator.py) and decompose it into `trend`, `seasonality`, and `remainder`.
 In `run_example.ipynb`, I attach the example codes to use RobustSTL and the outputs.
 
 <img src='./assets/RobustSTL_result.png'/> 
@@ -25,7 +25,7 @@ In `run_example.ipynb`, I attach the example codes to use RobustSTL and the outp
 * `main.py` : run example code
 * `RobustSTL.py`: contains RobustSTL algorithm and each process.
 * `utils.py`: common utility functions
-* `sample_generater.py`: generation codes of synthetic sample.
+* `sample_generator.py`: generation codes of synthetic sample.
 * `l1.py` : optimizer of l1 norm approximation (source: cvxopt)
 
 ## Arugments of RobustSTL

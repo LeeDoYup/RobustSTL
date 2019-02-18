@@ -1,5 +1,5 @@
 from utils import *
-from sample_generater import *
+from sample_generator import *
 from cvxopt import matrix
 from l1 import l1
 
