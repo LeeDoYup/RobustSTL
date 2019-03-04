@@ -33,10 +33,10 @@ In `run_example.ipynb`, I attach the example codes to use RobustSTL and the outp
 - season_len : length of seasonal period
 - reg1 : first order regularization parameter for trend extraction
 - reg2 : second order regularization parameter for trend extraction
-- K : number of past season samples in seasonaility extraction
-- H : number of neighrhood in seasonality extraction
+- K : number of past season samples in seasonality extraction
+- H : number of neighborhood in seasonality extraction
 - dn1, dn2 : hyperparameter of bilateral filter in denoising step.
-- ds1, ds2 : hypterparameter of bilarteral filter in seasonality extraction step.
+- ds1, ds2 : hyperparameter of bilarteral filter in seasonality extraction step.
 
 ## Shape of input sample
 Basically, RobustSTL is for univariate time series sample.  
