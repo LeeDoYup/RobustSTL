@@ -79,7 +79,7 @@ def _RobustSTL(input, season_len, reg1=10.0, reg2= 0.5, K=2, H=5, dn1=1., dn2=1.
     - reg1: first order regularization parameter for trend extraction
     - reg2: second order regularization parameter for trend extraction
     - K: number of past season samples in seasonaility extraction
-    - H: number of neighrhood in seasonality extraction
+    - H: number of neighborhood in seasonality extraction
     - dn1, dn2 : hyperparameter of bilateral filter in denoising step.
     - ds1, ds2 : hypterparameter of bilarteral filter in seasonality extraction step.
     '''
