@@ -133,7 +133,7 @@ def RobustSTL(input, season_len, reg1=10.0, reg2= 0.5, K=2, H=5, dn1=1., dn2=1.,
             
         input_list = [input[i,:] for i in range(num_series)]
         
-        from pathos.multiprocessing import ProcessingPool as Pool
+        from multiprocessing import ProcessingPool as Pool
         p = Pool(num_series)
         def run_RobustSTL(_input):
             return _RobustSTL(_input, season_len, reg1, reg2, K, H, dn1, dn2, ds1, ds2)
